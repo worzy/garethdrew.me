@@ -1,0 +1,30 @@
+{% embed 'partials/base.html.twig' %}
+
+    {% set collection = page.collection() %}
+
+    {% block content %}
+    {{ page.content }}
+
+    <div id="photoset-grid">
+    {% for image in page.media.images %}
+        <a href="{{ image.url }}" class="swipebox">
+        {{ image.cropResize(1500,1500).html }}
+        </a>
+    {% endfor %}
+    </div>
+
+    <script>
+        $('#photoset-grid').justifiedGallery({
+            rowHeight : 300,
+            lastRow : 'justify',
+            margins : 6
+        }).on('jg.complete', function () {
+            $('.swipebox').swipebox();
+        });
+    </script>
+
+    {% endblock %}
+
+{% endembed %}
+
+

@@ -1,0 +1,27 @@
+name: Photogrid
+version: 1.0.0
+description: "Photogrid by Gareth Drew"
+icon: empire
+author:
+  name: Gareth Drew
+  email: hello@garethdrew.me
+  url: https://garethdrew.me
+homepage: https://github.com/worzy/...
+demo: https://github.com/worzy/...
+keywords: photogrid, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/worzy/...
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool

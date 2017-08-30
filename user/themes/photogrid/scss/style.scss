@@ -1,0 +1,76 @@
+@import 'version';
+@import 'fonts';
+@import 'vars';
+@import 'functions';
+@import 'mixins';
+@import 'grid';
+
+// Common components
+@import 'components/body';
+
+// Pages
+// @import 'pages/page';
+
+#photoset-grid {
+    position: relative;
+}
+
+#header {
+    padding: 15px 10px 30px;
+}
+
+a {
+    color: #9c9c9c;
+}
+
+a:hover, a.active {
+    text-decoration: none;
+    color: #000;
+}
+
+#logo {
+    font-family: $logo-font;
+    width: 170px;
+    float: left;
+    a {
+        text-decoration: none;
+        color: #111;
+        letter-spacing: 0.067em;
+        text-transform: uppercase;
+        font-size: 29px;
+        font-weight: 700;
+    }
+}
+
+.navigation {
+    margin-top: -6px;
+    li {
+        &.active a {
+            color: #000;
+        }
+        float: left;
+        margin-right: 20px;
+        list-style: none;
+        a {
+            color: #9c9c9c;
+            text-decoration: none;
+            &:hover{
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
+
+.social {
+    font-size: 30px;
+    i {
+        padding: 8px;
+    }
+}
+
+.about-left {
+    img {
+        width: 100%;
+    }
+}
